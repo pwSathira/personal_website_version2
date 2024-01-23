@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap');
+
+/* Container positioning and text might need to be adjusted for smaller screens */
+.info-container {
+  position: absolute;
+  top: 50%; /* Adjust as necessary */
+  left: 50%; /* Centered for better mobile view */
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Responsive font sizes using viewport units */
+.info-container h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 5vw; /* Adjusted for mobile screens */
+  margin-top: 0;
+  margin-bottom: -0.15em;
+  filter: drop-shadow(0 0 0.75rem black);
+  transition: filter 0.3s ease-in-out;
+}
+
+.info-container h2 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 5vw; /* Adjusted for mobile screens */
+  color: red;
+  margin-top: -0.40em;
+  margin-bottom: 0;
+  transition: filter 0.3s ease-in-out;
+}
+
+.info-container > h2:hover{
+  filter: drop-shadow(0 0 10px red);
+}
+
+.info-container > h1:hover{
+  filter: drop-shadow(0 0 10px white);
+}
+
+/* Adjust paragraph size for better readability on mobile */
+.info-container p {
+  font-size: 3vw; /* Adjusted for mobile screens */
+  font-family: 'Berlin Sans FB', sans-serif;
+  margin-top: 0;
+  margin-bottom: 0;
+  position: relative;
+  display: inline-block;
+  z-index: -1;
+}
+
+/* Underline effect adjustments */
+.info-container p::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px; /* Height of the underline */
+  background-color: currentColor; /* Same color as the text */
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out, transform 0.3s ease-in-out;
+  z-index: -1;
+}
+
+.info-container p:hover::after {
+  width: 100%;
+  left: 0;
+  transform: translateX(0);
+}
+
+/* Ensure social icons are appropriately sized and spaced for mobile */
+.social-icons {
+  /* Add responsive styles for your social icons here */
+}
+
+.expandable-button {
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  z-index: 100;
+}
+
+.expandable-button > img:hover{
+/*  on hover have a glow of white around the image.*/
+  filter: drop-shadow(0 0 10px white);
+}
+
+.expandable-button > img {
+  cursor: pointer;
+  color: white;
+  width: 50px; /* Example size, adjust as needed */
+  height: auto;
+  border-radius: 5px; /* Optional, for rounded corners */
+  transition: filter 0.3s ease-in-out;
+}
+
+.expandable-button .links {
+  margin-top: 10px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.expandable-button .links a {
+  display: block;
+  color: #333;
+  text-decoration: none;
+  padding: 5px;
+  transition: background-color 0.3s;
+}
+
+.expandable-button .links a:hover {
+  background-color: #f8f9fa;
+}
+
+
+/* Media Query for smaller devices */
+@media only screen and (max-width: 600px) {
+  .info-container h1,
+  .info-container h2,
+  .info-container p {
+    font-size: 5vw; /* Further adjust font sizes for very small screens */
+  }
+}

@@ -10,5 +10,12 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'pwWebsite';
+  title = 'polywertz';
+  showLinks= false;
+  toggleLinks(){
+    this.showLinks = !this.showLinks;
+  }
 }
+
+
+

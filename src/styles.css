@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+html, body {
+  height: 100%; /* Full height */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  overflow: hidden; /* Prevent scrolling on the entire page */
+}
+.background-container {
+  background-image: url('assets/pwBackground.webp'); /* This will be your image's path */
+  background-size: cover; /* Cover the entire area of the container */
+  background-position: center; /* Center the image in the container */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  height: 120%; /* Full height of the viewport */
+  width: 120%; /* Full width of the viewport */
+  position: fixed; /* Fix the background to the viewport */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+  z-index: -1; /* Ensure it stays behind other content */
+  filter: blur(2px); /* Add the blur effect */
+}
+
+
+
